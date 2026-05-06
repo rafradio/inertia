@@ -5,6 +5,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\MenuCreateController;
+use App\Http\Controllers\KartyController;
 
 //Route::get('/', function () {
 //    return Inertia::render('Menu/Index', [
@@ -25,6 +26,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/menu', [MenuCreateController::class, 'index'])->name('menu.index');
+    Route::get('/karty', [KartyController::class, 'index'])->name('karty.index');
+    Route::post('/cardsrequest', [KartyController::class, 'store'])->name('karty.store');
 });
 
 require __DIR__.'/auth.php';

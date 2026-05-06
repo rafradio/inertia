@@ -3,7 +3,7 @@ import MenuItem from '@/Components/MenuItem';
 
 export default function MenuIndex({ menuTree }) {
   return (
-    <AppLayout menuTree={menuTree}>
+    <AppLayout>
       <div className="flex-1 flex items-center justify-center p-8">
         <div className="text-center max-w-2xl">
           <h2 className="text-4xl font-bold text-gray-800 mb-3">
