@@ -40,6 +40,7 @@ class HandleInertiaRequests extends Middleware
                 'error'   => fn () => $request->session()->get('error'),
             ],
             'testVariable' => fn() => $request->session()->get('testVariable'),
+//            'selectedCity' => fn() => $request->session()->get('city_id') 
         ];
     }
 }

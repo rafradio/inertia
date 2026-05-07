@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\MenuCreateController;
 use App\Http\Controllers\KartyController;
+use App\Http\Controllers\CityController;
 
 //Route::get('/', function () {
 //    return Inertia::render('Menu/Index', [
@@ -28,6 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/menu', [MenuCreateController::class, 'index'])->name('menu.index');
     Route::get('/karty', [KartyController::class, 'index'])->name('karty.index');
     Route::post('/cardsrequest', [KartyController::class, 'store'])->name('karty.store');
+    Route::patch('/city', [CityController::class, 'update'])->name('city.update');
 });
 
 require __DIR__.'/auth.php';
